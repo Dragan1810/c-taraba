@@ -70,4 +70,56 @@ namespace C_Taraba
         }
         
     }
+
+// ======================================================== zadatak 4
+
+    interface Oblik 
+    {
+        void IzracunajObim();  
+    }
+    class Geometrija 
+    {
+        static void Ispis()
+        {
+            Console.WriteLine("Well Hello");
+        }
+    }
+
+    class Pravougaonik : Oblik
+    {
+        private int stranicaA{get; set;}
+        private int stranicaB{get; set;}
+
+        public Pravougaonik(int stranicaA, int stranicaB)
+        {
+            this.stranicaA = stranicaA;
+            this.stranicaB = stranicaB;
+        }
+        
+        public void IzracunajObim()
+        {
+            throw new NotImplementedException();
+        }
+    }
+    class Trougao : Oblik
+    {
+        private int stranicaA{get; set;}
+        private int stranicaB{get; set;}
+        private int stranicaC{get; set;}
+        
+
+        public Trougao(int stranicaA, int stranicaB, int stranicaC)
+        {
+            this.stranicaA = stranicaA;
+            this.stranicaB = stranicaB;
+            this.stranicaC = stranicaC;
+        }
+        public void IzracunajObim()
+        {
+            throw new NotImplementedException();
+        }
+    }
+
 }
+
+
