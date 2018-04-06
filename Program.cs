@@ -5,7 +5,9 @@ namespace C_Taraba
     class Program
     {
         static void Main(string[] args)
-        {   
+        {
+            /*
+            --- zadatak 1
             Console.WriteLine($"Hello  World!");
             Raznostranicni Trougao1 = new Raznostranicni(2,2,2);
             Trougao1.getData();
@@ -13,15 +15,25 @@ namespace C_Taraba
             Trougao2.ObimJednako();
             Jednakostranicni Trougao3 = new Jednakostranicni(4);
             Trougao3.ObimJednakoStranicni();
-            Console.ReadKey();
+            */
+
+            /*
+            --- zadatak2
+            Pravougaonik pravo1 = new Pravougaonik(2, 2);
+            Trougao tro1 = new Trougao(2, 2, 2);
+            Geometrija.Ispis(pravo1.IzracunajObim());
+            Geometrija.Ispis(tro1.IzracunajObim());
+            */
+
+
         }
     }
 
     class Raznostranicni
     {
-        public int stranicaA{get; set;}
-        public int stranicaB{get; set;}
-        public int stranicaC{get; set;}
+        public int stranicaA { get; set; }
+        public int stranicaB { get; set; }
+        public int stranicaC { get; set; }
 
         public Raznostranicni(int stranicaA, int stranicaB, int stranicaC)
         {
@@ -50,63 +62,63 @@ namespace C_Taraba
 
     class Jednokraki : Raznostranicni
     {
-        public Jednokraki(int stranicaA, int stranicaB):base(stranicaA, stranicaB){}
-        public Jednokraki(int stranicaA):base(stranicaA){}
-        
+        public Jednokraki(int stranicaA, int stranicaB) : base(stranicaA, stranicaB) { }
+        public Jednokraki(int stranicaA) : base(stranicaA) { }
+
         public void ObimJednako()
         {
-            Console.WriteLine($"Obim2 je {2*stranicaB + stranicaA}");
+            Console.WriteLine($"Obim2 je {2 * stranicaB + stranicaA}");
         }
 
     }
 
-    class Jednakostranicni: Jednokraki 
+    class Jednakostranicni : Jednokraki
     {
-        public Jednakostranicni(int stranicaA):base(stranicaA){}
+        public Jednakostranicni(int stranicaA) : base(stranicaA) { }
 
         public void ObimJednakoStranicni()
         {
-            Console.WriteLine($"Obim3 je {3*stranicaA}");
+            Console.WriteLine($"Obim3 je {3 * stranicaA}");
         }
-        
+
     }
 
-// ======================================================== zadatak 4
+    // ======================================================== zadatak 4
 
-    interface Oblik 
+    interface Oblik
     {
-        void IzracunajObim();  
+        int IzracunajObim();
     }
-    class Geometrija 
+    class Geometrija
     {
-        static void Ispis()
+        public static void Ispis(int rezultat)
         {
-            Console.WriteLine("Well Hello");
+            Console.WriteLine($"Well Hello je {rezultat}");
         }
     }
 
     class Pravougaonik : Oblik
     {
-        private int stranicaA{get; set;}
-        private int stranicaB{get; set;}
+        private int stranicaA { get; set; }
+        private int stranicaB { get; set; }
 
         public Pravougaonik(int stranicaA, int stranicaB)
         {
             this.stranicaA = stranicaA;
             this.stranicaB = stranicaB;
         }
-        
-        public void IzracunajObim()
+
+        public int IzracunajObim()
         {
-            throw new NotImplementedException();
+            return 2 * (stranicaA + stranicaB);
         }
     }
     class Trougao : Oblik
     {
-        private int stranicaA{get; set;}
-        private int stranicaB{get; set;}
-        private int stranicaC{get; set;}
-        
+        private int stranicaA { get; set; }
+        private int stranicaB { get; set; }
+        private int stranicaC { get; set; }
+
 
         public Trougao(int stranicaA, int stranicaB, int stranicaC)
         {
@@ -114,9 +126,9 @@ namespace C_Taraba
             this.stranicaB = stranicaB;
             this.stranicaC = stranicaC;
         }
-        public void IzracunajObim()
+        public int IzracunajObim()
         {
-            throw new NotImplementedException();
+            return stranicaA + stranicaB + stranicaC;
         }
     }
 
