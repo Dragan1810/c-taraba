@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace C_Taraba
 {
@@ -19,11 +20,34 @@ namespace C_Taraba
 
             /*
             --- zadatak2
-            Pravougaonik pravo1 = new Pravougaonik(2, 2);
-            Trougao tro1 = new Trougao(2, 2, 2);
-            Geometrija.Ispis(pravo1.IzracunajObim());
-            Geometrija.Ispis(tro1.IzracunajObim());
+            Pravougaonik2 pravo1 = new Pravougaonik2(2, 2);
+            Trougao2 tro1 = new Trougao2(2, 2, 2);
+            Geometrija2.Ispis(pravo1.IzracunajObim());
+            Geometrija2.Ispis(tro1.IzracunajObim());
             */
+
+            /*
+            ---- zadatak3
+            Pravougaonik3 p = new Pravougaonik3(2, 3);
+            Kvadrat3 k = new Kvadrat3(5);
+            Krug3 kk = new Krug3(10);
+
+            List<object> stuff = new List<object>();
+            stuff.Add(p);
+            stuff.Add(k);
+            stuff.Add(kk);
+
+            foreach (object item in stuff)
+            {
+                Console.WriteLine(item);
+            }
+            stuff.Insert(3, new Krug3(11));
+            Console.WriteLine(stuff.Contains(p));
+            Console.WriteLine(stuff.Count);
+            */
+
+
+
 
 
         }
@@ -83,13 +107,13 @@ namespace C_Taraba
 
     }
 
-    // ======================================================== zadatak 4
+    // ======================================================== zadatak 2
 
-    interface Oblik
+    interface Oblik2
     {
         int IzracunajObim();
     }
-    class Geometrija
+    class Geometrija2
     {
         public static void Ispis(int rezultat)
         {
@@ -97,12 +121,12 @@ namespace C_Taraba
         }
     }
 
-    class Pravougaonik : Oblik
+    class Pravougaonik2 : Oblik2
     {
         private int stranicaA { get; set; }
         private int stranicaB { get; set; }
 
-        public Pravougaonik(int stranicaA, int stranicaB)
+        public Pravougaonik2(int stranicaA, int stranicaB)
         {
             this.stranicaA = stranicaA;
             this.stranicaB = stranicaB;
@@ -113,14 +137,14 @@ namespace C_Taraba
             return 2 * (stranicaA + stranicaB);
         }
     }
-    class Trougao : Oblik
+    class Trougao2 : Oblik2
     {
         private int stranicaA { get; set; }
         private int stranicaB { get; set; }
         private int stranicaC { get; set; }
 
 
-        public Trougao(int stranicaA, int stranicaB, int stranicaC)
+        public Trougao2(int stranicaA, int stranicaB, int stranicaC)
         {
             this.stranicaA = stranicaA;
             this.stranicaB = stranicaB;
@@ -129,6 +153,43 @@ namespace C_Taraba
         public int IzracunajObim()
         {
             return stranicaA + stranicaB + stranicaC;
+        }
+    }
+    // =============================================== zadatak 3
+    public abstract class Oblik3
+    {
+        public int a;
+        public int b;
+    }
+    class Pravougaonik3 : Oblik3
+    {
+        public Pravougaonik3(int a, int b)
+        {
+            this.a = a;
+            this.b = b;
+            Console.WriteLine(this.a);
+
+        }
+        public Pravougaonik3(int a)
+        {
+            this.a = a;
+        }
+    }
+    class Kvadrat3 : Pravougaonik3
+    {
+        public Kvadrat3(int a) : base(a)
+        {
+            this.a = a;
+            Console.WriteLine(this.a);
+
+        }
+    }
+    class Krug3 : Oblik3
+    {
+        public Krug3(int a)
+        {
+            this.a = a;
+            Console.WriteLine(this.a);
         }
     }
 
