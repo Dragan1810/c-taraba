@@ -46,10 +46,17 @@ namespace C_Taraba
             Console.WriteLine(stuff.Count);
             */
 
-
-
-
-
+        /*
+            Stack<int> intStack = new Stack<int>(10);
+            for(int i = 0;i<10; i++)
+            {
+                intStack.Push(i*5);
+            }
+            for(int i=0;i<10;i++)
+            {
+                Console.Write(intStack.Pop()+" ");
+            }
+        */
         }
     }
 
@@ -193,6 +200,44 @@ namespace C_Taraba
         }
     }
 
+//========================= zadatak genericke Stack stuff
+
+    public class Stack<T>
+    {
+        int size;
+        int index = 0;
+        T[] array;
+
+    public Stack(int size)
+    {
+        this.size = size;
+        array = new T[this.size];
+    }
+    public void Push (T item)
+    {
+        if (index >= size) {
+            throw new StackOverflowException();
+        }
+        array[index] = item;
+        index++;
+    }
+
+    public T Pop(){
+        index--;
+        if (index >= 0)
+        {
+            return array[index];
+        }
+        index = 0;
+        throw new InvalidOperationException("Errror");
+
+    }
+    } 
+
+//=================================================== genericki zadatak sa vise parametara
+
+
 }
+
 
 
