@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace Domaci_10
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -25,29 +22,29 @@ namespace Domaci_10
             InitializeComponent();
         }
 
-        private void mniStudenti_Click(object sender, RoutedEventArgs e)
+        private void MniVlasnici_Click(object sender, RoutedEventArgs e)
         {
-            cntCtrl.Content = new frmStudent();
+            cntCtrl.Content = new frmVlasnik();
         }
 
-        private void mniProfesori_Click(object sender, RoutedEventArgs e)
+        private void MniMehanicari_Click(object sender, RoutedEventArgs e)
         {
-            cntCtrl.Content = new frmProfesor();
+            cntCtrl.Content = new frmMehanicari();
         }
 
-        private void mniRokovi_Click(object sender, RoutedEventArgs e)
+        private void MniVrsta_Click(object sender, RoutedEventArgs e)
         {
-            cntCtrl.Content = new frmRok();
+            cntCtrl.Content = new frmVrsta();
         }
 
-        private void mniPredmeti_Click(object sender, RoutedEventArgs e)
+        private void MniAuto_Click(object sender, RoutedEventArgs e)
         {
-            cntCtrl.Content = new frmPredmet();
+            cntCtrl.Content = new frmAuto();
         }
 
-        private void mniPrijave_Click(object sender, RoutedEventArgs e)
+        private void MniServis_Click(object sender, RoutedEventArgs e)
         {
-            cntCtrl.Content = new frmPrijava();
+            cntCtrl.Content = new frmServis();
         }
     }
 

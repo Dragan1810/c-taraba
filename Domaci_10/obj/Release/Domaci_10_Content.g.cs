@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("ssluzbadb.mdf")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("ssluzbadb_log.ldf")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("workshop.mdf")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("workshop_log.ldf")]
 
 

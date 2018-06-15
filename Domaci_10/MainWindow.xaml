@@ -13,11 +13,11 @@
         </Grid.RowDefinitions>
 
         <Menu IsMainMenu="True">
-            <MenuItem Header="_Profesori" x:Name="mniProfesori" Click="mniProfesori_Click" />
-            <MenuItem Header="_Studenti" x:Name="mniStudenti" Click="mniStudenti_Click" />
-            <MenuItem Header="_Rokovi" x:Name="mniRokovi" Click="mniRokovi_Click" />
-            <MenuItem Header="_Predmeti" x:Name="mniPredmeti" Click="mniPredmeti_Click" />
-            <MenuItem Header="_Prijave" x:Name="mniPrijave" Click="mniPrijave_Click" />
+            <MenuItem Header="_Mehanicari" x:Name="mniMehanicari" Click="MniMehanicari_Click" />
+            <MenuItem Header="_Vlasnici" x:Name="mniVlasnici" Click="MniVlasnici_Click" />
+            <MenuItem Header="_Vrste" x:Name="mniVrste" Click="MniVrsta_Click" />
+            <MenuItem Header="_Auto" x:Name="mniAuto" Click="MniAuto_Click" />
+            <MenuItem Header="_Servis" x:Name="mniServis" Click="MniServis_Click" />
         </Menu>
 
         <ContentControl Grid.Row="1" x:Name="cntCtrl" 

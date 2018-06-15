@@ -13,6 +13,7 @@
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -25,7 +26,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -49,6 +49,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -69,56 +76,56 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="frmPredmet.xaml.cs">
-      <DependentUpon>frmPredmet.xaml</DependentUpon>
+    <Compile Include="frmAuto.xaml.cs">
+      <DependentUpon>frmAuto.xaml</DependentUpon>
     </Compile>
-    <Compile Include="frmPrijava.xaml.cs">
-      <DependentUpon>frmPrijava.xaml</DependentUpon>
+    <Compile Include="frmServis.xaml.cs">
+      <DependentUpon>frmServis.xaml</DependentUpon>
     </Compile>
-    <Compile Include="frmProfesor.xaml.cs">
-      <DependentUpon>frmProfesor.xaml</DependentUpon>
+    <Compile Include="frmMehanicari.xaml.cs">
+      <DependentUpon>frmMehanicari.xaml</DependentUpon>
     </Compile>
-    <Compile Include="frmRok.xaml.cs">
-      <DependentUpon>frmRok.xaml</DependentUpon>
+    <Compile Include="frmVrsta.xaml.cs">
+      <DependentUpon>frmVrsta.xaml</DependentUpon>
     </Compile>
-    <Compile Include="frmStudent.xaml.cs">
-      <DependentUpon>frmStudent.xaml</DependentUpon>
+    <Compile Include="frmVlasnik.xaml.cs">
+      <DependentUpon>frmVlasnik.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PredmetAddEdit.xaml.cs">
-      <DependentUpon>PredmetAddEdit.xaml</DependentUpon>
+    <Compile Include="AutoAddEdit.xaml.cs">
+      <DependentUpon>AutoAddEdit.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Prijava.cs" />
-    <Compile Include="PrijavaAddEdit.xaml.cs">
-      <DependentUpon>PrijavaAddEdit.xaml</DependentUpon>
+    <Compile Include="Servis.cs" />
+    <Compile Include="ServisAddEdit.xaml.cs">
+      <DependentUpon>ServisAddEdit.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ProfesorAddEdit.xaml.cs">
-      <DependentUpon>ProfesorAddEdit.xaml</DependentUpon>
+    <Compile Include="MehanicarAddEdit.xaml.cs">
+      <DependentUpon>MehanicarAddEdit.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Rok.cs" />
-    <Compile Include="RokAddEdit.xaml.cs">
-      <DependentUpon>RokAddEdit.xaml</DependentUpon>
+    <Compile Include="Vrsta.cs" />
+    <Compile Include="VrstaAddEdit.xaml.cs">
+      <DependentUpon>VrstaAddEdit.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Student.cs" />
-    <Compile Include="StudentAddEdit.xaml.cs">
-      <DependentUpon>StudentAddEdit.xaml</DependentUpon>
+    <Compile Include="Vlasnik.cs" />
+    <Compile Include="VlasnikAddEdit.xaml.cs">
+      <DependentUpon>VlasnikAddEdit.xaml</DependentUpon>
     </Compile>
-    <Page Include="frmPredmet.xaml">
+    <Page Include="frmAuto.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="frmPrijava.xaml">
+    <Page Include="frmServis.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="frmProfesor.xaml">
+    <Page Include="frmMehanicari.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="frmRok.xaml">
+    <Page Include="frmVrsta.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="frmStudent.xaml">
+    <Page Include="frmVlasnik.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -134,30 +141,30 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="PredmetAddEdit.xaml">
+    <Page Include="AutoAddEdit.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PrijavaAddEdit.xaml">
+    <Page Include="ServisAddEdit.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ProfesorAddEdit.xaml">
+    <Page Include="MehanicarAddEdit.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="RokAddEdit.xaml">
+    <Page Include="VrstaAddEdit.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="StudentAddEdit.xaml">
+    <Page Include="VlasnikAddEdit.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Predmet.cs" />
-    <Compile Include="Profesor.cs" />
+    <Compile Include="Auto.cs" />
+    <Compile Include="Mehanicar.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -175,6 +182,8 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="data.json" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -182,15 +191,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="SSluzbaDB.mdf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SSluzbaDB_log.ldf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <DependentUpon>SSluzbaDB.mdf</DependentUpon>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.1">
@@ -204,5 +204,19 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="WorkShop.mdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="WorkShop_log.ldf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <DependentUpon>WorkShop.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties data_1json__JSONSchema="http://json.schemastore.org/babelrc" />
+    </VisualStudio>
+  </ProjectExtensions>
 </Project>
